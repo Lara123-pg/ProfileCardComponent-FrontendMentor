@@ -1,0 +1,11 @@
+@mixin colorFont($weight, $color: '', $size: '') {
+    @if $color != '' {
+        color: $color;
+    }
+
+    @if $size != '' {
+        font-size: $size;
+    }
+
+    font-weight: $weight;
+}

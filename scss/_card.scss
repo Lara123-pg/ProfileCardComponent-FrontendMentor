@@ -1,0 +1,114 @@
+@import 'variables';
+
+div.container {
+    width: 98vw;
+    height: 97vh;
+
+    img.imageTop {
+        transform: rotate(50deg);
+        transform-origin: top right;
+    }
+
+    img.imageBottom {
+        margin-top: -35em;
+        margin-left: 25em;
+
+        transform: rotate(25deg);
+        transform-origin: bottom right;
+    }
+
+    div.beforeCard {
+        @include displayElements(flex, center, center);
+    }
+
+    div.card {
+        width: 450px;
+        height: 435px;
+
+        background-color: $color1;
+
+        border-radius: 15px;
+
+        position: absolute;
+        top: 6em;
+       
+        img.cardImage {
+            width: 100%;
+
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;  
+        }
+
+        img.peopleImage {
+            width: 24%;
+
+            border-radius: 60px;
+            border: 6px solid $color1;
+
+            position: relative;
+            bottom: 3em;
+            left: 9.5em;
+
+            margin-bottom: -2em;
+        }
+
+        div.profile {
+            @include displayElements(flex, center, center);
+            flex-direction: column;
+        
+            padding-bottom: 1.7em;
+
+            strong {
+                @include colorFont(700, '', 1.3rem);
+              
+                span {
+                    @include colorFont(400, $color3);
+                }
+            }
+
+            p {
+                @include colorFont(400, $color3, 1rem);
+
+                padding-top: 0.5em;
+            }
+        }
+
+        div.separator {
+            width: 100%;
+
+            border: 0;
+            border-top: 1px solid $color4;
+
+            padding-bottom: 1.2em;
+        }
+
+        div.profile2 {
+            @include displayElements(flex, space-around);
+    
+            div {
+                strong {
+                    @include colorFont(700, $color2, 1.5rem);
+                }
+
+                p {
+                    @include colorFont(400, $color4, 0.8rem);
+
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .attribution { 
+        font-size: 15px; 
+        text-align: center;
+        
+        position: absolute;
+        top: 42em;
+        left: 34em;
+    
+        a { 
+            color: hsl(228, 45%, 44%); 
+        }
+    }
+}
