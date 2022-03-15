@@ -1,4 +1,4 @@
-# Profile card component
+# Profile Card Component
 
 <img src="./images/image.png">
 
